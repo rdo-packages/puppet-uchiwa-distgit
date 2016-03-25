@@ -10,7 +10,7 @@ Source0:        https://github.com/Yelp/puppet-uchiwa/archive/%{version}.tar.gz
 
 BuildArch:      noarch
 
-Requires:       puppet-apt
+#Requires:       puppet-apt
 Requires:       puppet-stdlib
 Requires:       puppet >= 2.7.0
 
