@@ -1,3 +1,11 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%define upstream_name puppet-uchiwa
+%global commit 64ce619c26995bc270aa762e24ca298b9787bc3e
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
+
 Name:           puppet-uchiwa
 Version:        XXX
 Release:        XXX
@@ -6,7 +14,7 @@ License:        Apache 2.0
 
 URL:            https://github.com/yelp/puppet-uchiwa
 
-Source0:        https://github.com/Yelp/puppet-uchiwa/archive/%{version}.tar.gz
+Source0:        https://github.com/Yelp/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 
@@ -18,7 +26,7 @@ Requires:       puppet >= 2.7.0
 Puppet module for installing Uchiwa
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{upstream_version}
 
 find . -type f -name ".*" -exec rm {} +
 find . -size 0 -exec rm {} +
