@@ -7,8 +7,8 @@
 
 
 Name:           puppet-uchiwa
-Version:        XXX
-Release:        XXX
+Version:        1.0.1
+Release:        1%{?alphatag}%{?dist}
 Summary:        Puppet module for installing Uchiwa
 License:        Apache 2.0
 
@@ -50,4 +50,7 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/uchiwa/
 
 
 %changelog
+* Fri Sep 23 2016 Haikel Guemar <hguemar@fedoraproject.org> - 1.0.1-1.64ce619.git
+- Newton update 1.0.1 (64ce619c26995bc270aa762e24ca298b9787bc3e)
+
 
