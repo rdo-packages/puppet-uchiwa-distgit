@@ -1,14 +1,14 @@
 %{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name puppet-uchiwa
-%global commit 64ce619c26995bc270aa762e24ca298b9787bc3e
+%global commit fd951aea71853ce15ef1d3a547f50b148d7bcb37
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-uchiwa
-Version:        XXX
-Release:        XXX
+Version:        2.1.1
+Release:        1%{?alphatag}%{?dist}
 Summary:        Puppet module for installing Uchiwa
 License:        ASL 2.0
 
@@ -50,5 +50,8 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/uchiwa/
 
 
 %changelog
+* Thu Feb 15 2018 RDO <dev@lists.rdoproject.org> 2.1.1-1.fd951aegit
+- Update to post 2.1.1 (fd951aea71853ce15ef1d3a547f50b148d7bcb37)
+
 
 
